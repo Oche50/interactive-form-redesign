@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-size: 18px;
+  font-family: Space Grotesk;
+  min-height: 100vh;
+}
+:root {
+  --red: hsl(0, 100%, 66%);
+  --white: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+.hidden{
+    display: none !important;
+}
+.container{
+    display: flex;
+    align-items: center;
+}
+.left-section{
+    min-height: 100vh;
+    width: 40%;
+    background-image: url(images/bg-main-desktop.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.cards{
+    position: absolute;
+    top: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+.front-card{
+    position: relative;
+    transform: translateX(-100px);
+}
+.card-logo{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+
+}
+#number{
+    position: absolute;
+    color: var(--white);
+    bottom: 5.3rem;
+    left: 1.5rem;
+    letter-spacing: 2px;
+}
+#stroke{
+    position: absolute;
+    color: white;
+    top: 11rem;
+    left: 87%;
+    font-weight: bold;
+}
+/* .card-info{
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    right: 3rem;
+    display: flex;
+    color: var(--white);
+    justify-content: space-between;
+} */
+#name{
+    position: absolute;
+    top: 70%;
+    left: 6%;
+    color: var(--white);
+}
+#month{
+    position: absolute;
+    top: 70%;
+    left: 80%;
+    /* font-weight: lighter; */
+    color: var(--white);
+   
+}
+#year{
+    position: absolute;
+    top: 70%;
+    left: 89%;
+    color: var(--white);
+    
+   
+}
+ .back-card{
+    position: relative;
+    color: var(--white);
+}
+#cvc{
+    position: absolute;
+    right: 3.5rem;
+    top:7rem;
+    color: var(--Light-grayish-violet);
+}
+.right-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.right-section form{
+    display: grid;
+    gap: 1rem;
+    width: 350px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(4,1fr);
+} 
+label{
+    color: var(--Very-dark-violet);
+    margin-bottom: .1rem;
+    text-transform: uppercase;
+}
+input{
+    padding:.5rem;
+    font-size: 18px;
+    border: 1px solid var(--Dark-grayish-violet);
+    border-radius: 6px;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{
+    -webkit-appearance:none;
+    margin: 0;
+}
+input::placeholder{
+    font-family: inherit;
+    color: var(--Dark-grayish-violet);
+}
+input:focus{
+    outline-color: hsl(249,99%,64%);
+}
+.grid-1{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+.grid-2{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2 span;
+}
+.grid-3{
+    display: flex;
+    flex-direction: column;
+}
+.grid-4{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+.card-information{
+    display: flex;
+    grid-column: 2 span;
+    gap: 1rem;
+}
+.card-date{
+    display: flex;
+    flex-direction: column;
+    grid-column: 1 span;
+}
+.card-date .two-inp{
+    display: flex;
+}
+.two-inp div{
+    flex-direction: column;
+}
+.card-date div input{
+    width: 80px;
+    margin-inline:.9rem;
+    margin-left: 0;
+}
+.cvc-input[type="text"]{
+    width: 145px;
+}
+form button{
+    grid-column: 2 span;
+    font-size: 18px;
+    height: 50px;
+    color: var(--white);
+    border-radius: 6px;
+    background-color: var(--Very-dark-violet);
+    cursor: pointer;
+
+}
+.thankyou-section{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.thankyou-section h3{
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+.thankyou-section p{
+    font-size: 18px;
+    color: var(--Dark-grayish-violet);
+}
+.thankyou-section button{
+    color: var(--white);
+    width: 100%;
+    border-radius: 6px;
+    padding: 1rem;
+    font-size: 18px;
+    background-color: var(--Very-dark-violet);
+    cursor: pointer;
+}
+.formdetails .hidden{
+    display: none;
+  }
+#error-message{
+    color: red;
+    font-size: 10px;
+}
+.expmonth-error{
+    position: absolute;
+    top: 24.9rem;
+}
+.expyear-error{
+    position: absolute;
+    top: 24.9rem;
+    left: 48.3rem;
+}
+.cvc-error{
+    position:absolute ;
+    top: 24.9rem;
+    right: 24.3rem;
+}
+
+
+@media screen and (max-width:1023px){
+    .front-card,.front-card img,.back-card, .back-card img{
+        width: 300px;
+    }
+    .card-container .card-logo{
+        width: 50px;
+    }
+    #number{
+        font-size: 1.1rem;
+    }
+    #cvc{
+        top: 42%;
+        right: 12%;
+    }
+}
+@media screen and (max-width:767px){
+    .container{
+        flex-direction: column;
+    }
+    .front-card,.front-card img,.back-card, .back-card img{
+        width: 280px;
+    }
+    .left-section{
+        width: 100%;
+        min-height: 30vh;
+        background-image: url(images/bg-main-mobile.png);
+
+    }
+    .cards{
+        flex-direction: column-reverse;
+        left: 61%;
+        top: 60%;
+        gap: 0;
+    }
+    .back-card{
+        transform: translateY(70px);
+    }
+    .front-card{
+        z-index: 100;
+    }
+    .right-section{
+        margin-top: 6rem;
+    }
+    #name{
+        font-size: 12px;
+        font-weight: lighter;
+        position: absolute;
+        left: 1.5rem;
+    }
+    #number{
+        position: absolute;
+        top: 4rem;
+    }
+    #stroke{
+        position: absolute;
+        top: 6.8rem;
+    }
+    #month{
+        position: absolute;
+        top: 6.6rem;
+    }
+    #year{
+      position: absolute;
+      top: 6.6rem;
+    }
+    .expmonth-error{
+        position: absolute;
+        top: 32.9rem;
+    }
+    .expyear-error{
+        position: absolute;
+        top: 32.9rem;
+        left: 10.5rem;
+    }
+    .cvc-error{
+        position: absolute;
+        top: 32.9rem;
+        left: 17.5rem;
+    }
+}
